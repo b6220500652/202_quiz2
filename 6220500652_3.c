@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main()
 {
-	int n,x,y,c=0,d=0,i,palin;
+	int n,x,y=0,c=0,d=0,i,palin;
 	scanf("%d",&n);
 	for(i=1;i<=n;i++)
 	{
@@ -12,7 +12,7 @@ int main()
 			y=y*10+x;
 			palin=palin/10;
 		}
-		if(palin==y)
+		if(i==y)
 		{
 			c++;
 		}
@@ -20,6 +20,7 @@ int main()
 		{
 			d++;
 		}
+		
 	}
 	printf("%d",c);
 	
