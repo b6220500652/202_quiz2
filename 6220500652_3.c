@@ -1,19 +1,26 @@
 #include<stdio.h>
 int main()
 {
-	int n,x,y,c=0,i,palin;
+	int n,x,y,c=0,d=0,i,palin;
 	scanf("%d",&n);
-	palin=n;
-	while(n!=0)
+	for(i=1;i<=n;i++)
 	{
-			x=n%10;
-			y=y*10+x;
-			n=n/10;
-	}
-	if(palin==y)
+		palin=i;
+		while(palin!=0)
 		{
-		 printf("palin");
-			
+			x=palin%10;
+			y=y*10+x;
+			palin=palin/10;
 		}
+		if(palin==y)
+		{
+			c++;
+		}
+		else
+		{
+			d++;
+		}
+	}
+	printf("%d",c);
 	
 }
